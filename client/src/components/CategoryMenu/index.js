@@ -12,7 +12,7 @@ function CategoryMenu() {
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
-    if (categoryData) {
+    if (categoryData && categoryData.categories) {
       dispatch({
         type: UPDATE_CATEGORIES,
         categories: categoryData.categories
