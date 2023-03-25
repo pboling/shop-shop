@@ -62,7 +62,7 @@ function Detail() {
       setCurrentProduct(products.find(product => product._id === id));
     }
     // retrieved from server
-    else if (data) {
+    else if (data && data.products) {
       dispatch({
         type: UPDATE_PRODUCTS,
         products: data.products
